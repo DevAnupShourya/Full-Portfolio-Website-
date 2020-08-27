@@ -1,0 +1,212 @@
+/* ===========================CSS FOR Portfolio.HTML ONLY ===================================== */
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+a,
+li {
+  text-decoration: none;
+  color: #000000;
+  list-style: none;
+}
+a {
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+p {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+::root {
+  --c1: #ea4642;
+  --c21: #398cc2;
+  --c31: #000000;
+  --c41: #000000;
+}
+/* ----------------------------style-starts------------------------------------------------- */
+/* ++++++++++++++navbar style +++++++++++++++++++++++*/
+header {
+  width: 100%;
+  height: auto;
+  background-color: #f6f7f8;
+}
+header nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background: #ea4642;
+  justify-content: space-between;
+  padding: 5px 50px;
+}
+nav .logo-area {
+  width: 10%;
+  height: auto;
+}
+.logo-area img {
+  width: 100%;
+  height: 100%;
+}
+nav .links-area {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  transform: translate(0%, 22%);
+}
+
+.links-area a {
+  display: block;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px dashed #ea4642;
+}
+
+.links-area a:hover {
+  color: whitesmoke;
+  border-bottom: 1px dashed black;
+}
+.js-menu {
+  display: none;
+}
+
+header .head-content {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+}
+.head-content .col-1 {
+  width: 60%;
+  height: auto;
+  padding: 0px 0px;
+}
+.col-1 img {
+  width: 100%;
+  height: auto;
+}
+.head-content .col-2 {
+  width: 40%;
+  height: auto;
+  padding: 10px 30px;
+}
+.col-2 h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 10px;
+  letter-spacing: 1px;
+}
+.col-2 h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-top: 5px;
+  letter-spacing: 2px;
+}
+.col-2 h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding-top: 5px;
+  letter-spacing: 2px;
+}
+.col-2 li {
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+/* ------------------navbar style finish--------------------*/
+
+footer .intro p {
+  width: 100%;
+  background-color: silver;
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+/* ============= Media Queries ================ */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  body {
+    min-width: 320px !important;
+    max-width: 768px !important;
+  }
+  nav .links-area {
+    display: none;
+  }
+  .js-menu {
+    width: 10%;
+    height: 100%;
+    display: block;
+    justify-content: space-evenly;
+  }
+  .js-menu i {
+    font-size: 2rem;
+    text-align: end;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    transition: 1s 0ms;
+    background-color: #d4e6f4;
+  }
+  .overlay-menu > h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    cursor: pointer;
+  }
+  .overlay-menu ul {
+    width: 100%;
+    height: 50%;
+    transform: translate(0%, 50%);
+    text-align: center;
+    z-index: 10;
+  }
+  .overlay-menu a {
+    display: block;
+    width: 30%;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .overlay-menu .o-l {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+  }
+  .overlay-menu .o-l a i {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+  }
+  header,
+  footer {
+    width: 126%;
+  }
+}
+
+/* ============= Media Queries ================ */
