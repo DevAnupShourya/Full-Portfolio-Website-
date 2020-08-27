@@ -1,0 +1,252 @@
+/* ===========================CSS FOR About.HTML ONLY ===================================== */
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+a,
+li {
+  text-decoration: none;
+  color: #000000;
+  list-style: none;
+}
+a {
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+p {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+::root {
+  --c1: #ea4642;
+  --c21: #398cc2;
+  --c31: #000000;
+  --c41: #000000;
+}
+/* ----------------------------style-starts------------------------------------------------- */
+/* ++++++++++++++navbar style +++++++++++++++++++++++*/
+header {
+  width: 100%;
+  height: auto;
+  background-color: #f6f7f8;
+}
+header nav {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background: #ea4642;
+  justify-content: space-between;
+  padding: 5px 50px;
+}
+nav .logo-area {
+  width: 10%;
+  height: auto;
+}
+.logo-area img {
+  width: 100%;
+  height: 100%;
+}
+nav .links-area {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  transform: translate(0%, 22%);
+}
+
+.links-area a {
+  display: block;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px dashed #ea4642;
+}
+
+.links-area a:hover {
+  color: whitesmoke;
+  border-bottom: 1px dashed black;
+}
+.js-menu {
+  display: none;
+}
+
+header .head-content {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.head-content .col-1 {
+  width: 40%;
+  height: auto;
+  padding: 0px 0px;
+}
+.col-1 img {
+  width: 100%;
+  height: auto;
+  padding-top: 25px;
+  border-radius: 180px;
+  cursor: pointer;
+}
+.col-1 img:hover {
+  transform: rotate(360deg);
+  transition: 1s 0ms ease-in-out;
+}
+.head-content .col-2 {
+  width: 50%;
+  height: auto;
+  padding: 10px 30px;
+}
+.col-2 h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-top: 5px;
+  letter-spacing: 2px;
+}
+.col-2 h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 10px;
+  letter-spacing: 1px;
+}
+.col-2 h2 a i {
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+/* ------------------navbar style finish--------------------*/
+section {
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+  background: radial-gradient(white, #d4e6f4);
+}
+section .scetion-1-content {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 20px 10px;
+}
+.scetion-1-content p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+.scetion-1-content ul li {
+  font-weight: 600;
+  letter-spacing: 1px;
+  list-style-type: square;
+}
+footer .intro p {
+  width: 100%;
+  background-color: silver;
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+/* ============= Media Queries ================ */
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  body {
+    min-width: 320px !important;
+    max-width: 768px !important;
+  }
+  nav .links-area {
+    display: none;
+  }
+  .js-menu {
+    width: 10%;
+    height: 100%;
+    display: block;
+    justify-content: space-evenly;
+  }
+  .js-menu i {
+    font-size: 2rem;
+    text-align: end;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    transition: 1s 0ms;
+    background-color: #d4e6f4;
+  }
+  .overlay-menu > h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    cursor: pointer;
+  }
+  .overlay-menu ul {
+    width: 100%;
+    height: 50%;
+    transform: translate(0%, 50%);
+    text-align: center;
+    z-index: 10;
+  }
+  .overlay-menu a {
+    display: block;
+    width: 30%;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .overlay-menu .o-l {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+  }
+  .overlay-menu .o-l a i {
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+  }
+  header .head-content {
+    flex-direction: column;
+  }
+  .head-content .col-1 {
+    width: 50%;
+    margin: auto;
+  }
+  header,
+  section,
+  footer {
+    width: 126%;
+  }
+  .head-content .col-2 {
+    width: 95%;
+    overflow: scroll;
+  }
+}
+@media only screen and (min-device-width: 1100px) {
+  nav .links-area {
+    transform: translate(0%, 50%);
+  }
+}
+/* ============= Media Queries ================ */
